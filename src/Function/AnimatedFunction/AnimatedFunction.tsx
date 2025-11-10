@@ -36,8 +36,31 @@ export const slideInVariants = {
   },
 };
 
-export const ScaleAnimation = {
-  initial: { scale: 0, x: '-50%', y: '-50%' },
-  open: { scale: 1, x: '-50%', y: '-50%', transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] } },
-  closed: { scale: 0, x: '-50%', y: '-50%', transition: { duration: 0.4, ease: [0.32, 0, 0.67, 1] } },
-}
+// AnimatedFunction.ts
+import { Variants, cubicBezier } from "framer-motion";
+
+export const ScaleAnimation: Variants = {
+  initial: {
+    scale: 0,
+    x: "-50%",
+    y: "-50%",
+  },
+  open: {
+    scale: 1,
+    x: "-50%",
+    y: "-50%",
+    transition: {
+      duration: 0.4,
+      ease: cubicBezier(0.76, 0, 0.24, 1), // ✅ type-safe equivalent
+    },
+  },
+  closed: {
+    scale: 0,
+    x: "-50%",
+    y: "-50%",
+    transition: {
+      duration: 0.4,
+      ease: cubicBezier(0.32, 0, 0.67, 1), // ✅ type-safe equivalent
+    },
+  },
+};

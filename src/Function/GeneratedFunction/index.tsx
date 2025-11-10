@@ -1,10 +1,11 @@
-import { motion } from 'framer-motion';
-import { AnimationControls, Variants } from 'framer-motion';
-import { CSSProperties } from 'react';
+import { motion, Variants, animationControls } from 'framer-motion';
+import type { CSSProperties } from 'react';
+
+type AnimationControlsType = ReturnType<typeof animationControls>;
 
 interface RenderTextProps {
   text: string;
-  controls: AnimationControls;
+  controls: AnimationControlsType; // <- derived type
   variants: Variants;
   style?: CSSProperties;
 }
