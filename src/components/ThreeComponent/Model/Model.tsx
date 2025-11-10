@@ -15,6 +15,7 @@
 //     const mesh = useRef<THREE.Mesh>(null);
 
 //     const textures = projects.map((project) => useTexture(project.src));
+// console.log(first)
 
 //     const scale = useAspect(
 //         textures[0].image.width,
