@@ -98,11 +98,11 @@ const experiences = [
 const ExperienceSection = () => {
     return (
         // bg-gradient-to-b from-gray-50 to-white
-            <section className="py-20 px-20 relative overflow-x-hidden overflow-y-visible max-w-[100vw]">
+            <section className="py-6 lg:py-20 md:py-16 sm:py-12 px-4 lg:px-20 md:px-16 sm:px-12 relative overflow-x-hidden overflow-y-visible max-w-[100vw]">
 
-            <div className="text-start w-full border-b-1 border-zinc-800  text-zinc-200 text-6xl mb-8 flex items-start justify-start gap-2 ">
+            <div className="text-start w-full border-b-1 border-zinc-800  text-zinc-200 text-3xl lg:text-6xl md:text-5xl sm:text-3xl mb-0 lg:mb-8 md:mb-6 sm:mb-4 flex items-start justify-start gap-2 ">
                 <h1 className="font-semibold">Experience</h1>
-                <div className="flex items-center justify-center mt-8 text-zinc-400 font-semibold mb-10"><IoReturnUpForward className=" text-6xl rotate-90" /></div>
+                <div className="flex items-center justify-center  mt-4 lg:mt-8 md:mt-6 sm:mt-4 text-zinc-400 font-semibold mb-3 lg:mb-10 md:mb-8 sm:mb-6"><IoReturnUpForward className=" text-3xl lg:text-6xl md:text-5xl sm:text-3xl rotate-90" /></div>
             </div>
 
             <motion.div
@@ -110,60 +110,28 @@ const ExperienceSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="mt-10 text-center mb-15 flex flex-row items-center justify-center gap-4"
+                className="mt-4 lg:mt-10 md:mt-8 sm:mt-6 text-center mb-15 flex flex-row items-center justify-center gap-0"
             >
-
-                {/* <div className="w-fit rounded-2xl backdrop-blur-lg bg-white/7 shadow-2xl bg-background/100 items-center justify-center p-4 px-6">
-
-                    <div className="text-white" >
-                        <div className=" w-full flex justify-start">
-                            <ShinyText className="text-4xl">20</ShinyText>
-                            <span className="text-2xl text-white -mt-2" >+</span>
-                        </div>
-                        <h3 className="text-white text-sm w-20 text-wrap text-zinc-400 pt-1">Implemented Design</h3>
-                    </div>
-                </div>
-                <div className="w-fit rounded-2xl backdrop-blur-lg bg-white/7 shadow-2xl bg-background/100 items-center justify-center p-4 px-6">
-
-                    <div className="text-white" >
-                        <div className=" w-full flex justify-start">
-                            <h1 className="text-4xl font-bold bg-clip-text text-transparent" style={{ backgroundImage: "radial-gradient(circle,rgba(255, 255, 255, 1) 40%, rgb(131, 131, 131) 100%)" }}>7
-                            </h1>
-                        </div>
-                        <h3 className="text-white text-sm w-20 text-wrap text-zinc-400 pt-1">Production Builds</h3>
-                    </div>
-                </div>
-                <div className="w-fit rounded-2xl backdrop-blur-lg bg-white/7 shadow-2xl bg-background/100 items-center justify-center p-4 px-6">
-
-                    <div className="text-white" >
-                        <div className=" w-full flex justify-start">
-                            <h1 className="text-4xl font-bold bg-clip-text text-transparent" style={{ backgroundImage: "radial-gradient(circle,rgba(255, 255, 255, 1) 40%, rgb(131, 131, 131) 100%)" }}>7
-                            </h1>
-                            <span className="text-3xl text-white -mt-2" >+</span>
-                        </div>
-                        <h3 className="text-white text-sm w-20 text-wrap text-zinc-400 pt-1">Implemented Design</h3>
-                    </div>
-                </div> */}
-                <div className=" inline-flex backdrop-blur-lg bg-white/7 shadow-2xl bg-background/100 items-center gap-8 px-8 py-6 rounded-2xl">
+                <div className="inline-flex backdrop-blur-lg bg-white/7 shadow-2xl bg-background/100 items-center gap-3 lg:gap-4 md:gap-3 sm:gap-2 lg:gap-8 md:gap-6 sm:gap-4 px-4 lg:px-8 md:px-6 sm:px-4  py-2 lg:py-6 md:py-5 sm:py-4 rounded-2xl">
                     <div className="text-center">
-                        <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                        <div className="text-[0.75rem] lg:text-3xl md:text-2xl sm:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                             2+ Years
                         </div>
-                        <div className="text-sm text-zinc-300 mt-1">Experience</div>
+                        <div className="text-[0.5rem] lg:text-sm text-zinc-300 mt:0 lg:mt-1 md:mt-1 sm:mt-0">Experience</div>
                     </div>
-                    <div className="w-px h-12 bg-gray-300" />
+                    <div className="w-px h-8 lg:h-12 md:h-10 sm:h-9 bg-gray-300" />
                     <div className="text-center">
-                        <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                        <div className="text-[0.75rem] lg:text-3xl md:text-2xl sm:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                             50M+
                         </div>
-                        <div className="text-sm text-zinc-300 mt-1">USD Facilitated</div>
+                        <div className="text-[0.5rem] lg:text-sm text-zinc-300 mt:0 lg:mt-1 md:mt-1 sm:mt-0">USD Facilitated</div>
                     </div>
-                    <div className="w-px h-12 bg-gray-300" />
+                    <div className="w-px h-8 lg:h-12 md:h-10 sm:h-9 bg-gray-300" />
                     <div className="text-center">
-                        <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                        <div className="text-[0.75rem] lg:text-3xl md:text-2xl sm:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                             46+
                         </div>
-                        <div className="text-sm text-zinc-300 mt-1">Components Built</div>
+                        <div className="text-[0.5rem] lg:text-sm text-zinc-300 mt:0 lg:mt-1 md:mt-1 sm:mt-0">Components Built</div>
                     </div>
                 </div>
             </motion.div>
@@ -205,10 +173,10 @@ const ExperienceSection = () => {
                                         >
                                             <div className="mb-6">
                                                 <div className="flex items-start justify-between mb-3">
-                                                    <h3 className="text-2xl font-bold text-zinc-300 leading-tight">
+                                                    <h3 className="text-xl lg:text-2xl md:text-xl sm:text-lg font-bold text-zinc-300 leading-tight">
                                                         {exp.title}
                                                     </h3>
-                                                    <span className={`px-4 py-1.5 rounded-full text-xs font-semibold ${exp.date.includes('Present')
+                                                    <span className={`px-2 whitespace-nowrap lg:px-4 md:px-3 sm:px-2 py-1.5 rounded-full text-[0.5rem] lg:text-xs md:text-xs sm:text-xs font-semibold ${exp.date.includes('Present')
                                                         ? 'bg-green-100 text-green-700'
                                                         : 'bg-blue-100 text-blue-700'
                                                         }`}>
@@ -216,7 +184,7 @@ const ExperienceSection = () => {
                                                     </span>
                                                 </div>
 
-                                                <h4 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-2">
+                                                <h4 className="text-lg lg:text-xl md:text-lg sm:text-md font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-2">
                                                     {exp.company}
                                                 </h4>
 

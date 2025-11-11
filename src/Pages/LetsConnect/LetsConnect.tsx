@@ -3,24 +3,24 @@ import HRFormPage from "../../components/HRFormPage/HRFormPage";
 const LetsConnect = () => {
     return (
         <>
-            <div className="flex flex-col w-full px-10 relative">
-                <div className=" flex items-start justify-between w-full py-10 pb-10 border-b-1 border-zinc-600">
+            <div className="flex flex-col w-full px-2 lg:px-10 md:px-8 sm:px-6 relative">
+                <div className=" flex flex-col lg:flex-row md:flex-row sm:flex-col items-start justify-between w-full py-10 pb-10 border-b-1 border-zinc-600">
 
-                    <div className="w-1/2">
+                    <div className="w-full lg:w-1/2 md:w-1/2 sm:full px-4 lg:px-0 md:px-0 sm:px-4">
 
-                        <div className="mt-10">
-                            <h1 className="text-8xl text-white ">
+                        <div className="mt-2 lg:mt-10 md:mt-8 sm:mt-6">
+                            <h1 className="text-3xl lg:text-8xl md:text-7xl sm:text-6xl text-white ">
                                 Let's Connect
                             </h1>
-                            <h1 className="text-8xl text-white"> There</h1>
+                            <h1 className="text-3xl lg:text-8xl md:text-7xl sm:text-6xl text-white "> There</h1>
                         </div>
-                        <div className="mt-10">
-                            <h1 className="text-xl text-zinc-300 font-light">Looking to collaborate, discuss a new opportunity, or bring innovative ideas to life?
+                        <div className="mt-4 lg:mt-10 md:mt-8 sm:mt-6">
+                            <h1 className="text-[0.7rem] lg:text-xl md:text-lg sm:text-base text-zinc-300 font-light">Looking to collaborate, discuss a new opportunity, or bring innovative ideas to life?
 I’m always open to meaningful conversations with forward-thinking teams and organizations.
 Fill out the form below, and let’s start building something exceptional together.</h1>
                         </div>
                     </div>
-                    <div className="w-1/2">
+                    <div className="w-full lg:w-1/2 md:w-1/2 sm:w-full mt-4 lg:mt-0 md:mt-0 sm:mt-4">
                         <HRFormPage />
                     </div>
                     {/* <div >

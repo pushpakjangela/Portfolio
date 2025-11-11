@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import MagneticEffect from "../AnimationComponent/MagneticComponent";
+import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 const navItems = [
   { name: "Home", href: "home" },
@@ -12,6 +13,7 @@ const navItems = [
 
 const NavigationBar = () => {
   const [active, setActive] = useState("Home");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   // Scroll to section smoothly when a nav item is clicked
   const handleScroll = (id: string, name: string) => {
@@ -19,10 +21,11 @@ const NavigationBar = () => {
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
       setActive(name);
+      setMenuOpen(false); // close mobile menu after click
     }
   };
 
-  // Update active tab on scroll (scroll spy behavior)
+  // Scroll spy
   useEffect(() => {
     const handleScrollSpy = () => {
       const scrollPosition = window.scrollY + window.innerHeight / 3;
@@ -46,13 +49,15 @@ const NavigationBar = () => {
   }, []);
 
   return (
-    <div className="flex w-full px-4 py-3 justify-between backdrop-blur-sm bg-white/7 shadow-lg bg-background/100 rounded-xl">
-      <h1 className="text-white flex items-center">
-        <span className="font-thin pr-2 text-lg">Ⓒ</span>
-        Pushpak Jangela
+    <div className="flex w-full px-4 py-3 justify-between items-center backdrop-blur-sm bg-white/7 shadow-lg rounded-xl">
+      {/* Left Side */}
+      <h1 className="text-white flex items-center text-sm sm:text-[2px]">
+        <span className="font-thin pr-2 text-sm sm:text-sm ">Ⓒ</span>
+        <span className="sm:text-[0.6rem] xs:text-[0.5rem] lg:text-lg">Pushpak Jangela</span>
       </h1>
 
-      <nav>
+      {/* Desktop Menu */}
+      <nav className="hidden sm:block">
         <ul className="flex gap-4 text-white items-center">
           {navItems.map((item) => (
             <MagneticEffect key={item.name}>
@@ -84,6 +89,38 @@ const NavigationBar = () => {
           ))}
         </ul>
       </nav>
+
+      {/* Mobile Menu Button */}
+      <button
+        className="text-white text-2xl sm:hidden"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        {menuOpen ? <HiX /> : <HiMenuAlt3 />}
+      </button>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="absolute top-16 left-0 w-full bg-black/90 backdrop-blur-md flex flex-col items-center gap-6 py-6 sm:hidden z-50"
+          >
+            {navItems.map((item) => (
+              <button
+                key={item.name}
+                onClick={() => handleScroll(item.href, item.name)}
+                className={`text-lg transition-all ${
+                  active === item.name ? "text-white font-bold" : "text-gray-300"
+                }`}
+              >
+                {item.name}
+              </button>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

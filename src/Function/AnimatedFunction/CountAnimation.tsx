@@ -19,7 +19,7 @@ export const Counter = ({
   from = 0,
   to,
   animationOptions,
-  className = 'text-xl font-extrabold sm:text-2xl md:text-3xl',
+  className = 'text-lg lg:text-3xl md:text-2xl sm:text-xl font-extrabold',
 }: AnimatedCounterProps) => {
   const ref = React.useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true });

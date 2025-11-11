@@ -13,8 +13,8 @@ const MainPage = () => {
     return (
         <>
         
-        <div className="min-h-screen relative " style={{ backgroundColor: theme.background.default }}>
-            <div className="fixed w-full h-screen">
+        <div className="min-h-screen w-screen relative " style={{ backgroundColor: theme.background.default }}>
+            <div className="fixed w-full h-[137vh] lg:h-full md:h-full sm:h-full">
                 <iframe src='https://my.spline.design/aidatamodelinteraction-mdTL3FktFVHgDvFr5TKtnYDV/' frameBorder='0' width='100%' height='100%'></iframe>
             </div>
             <section id="home">

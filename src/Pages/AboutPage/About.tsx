@@ -84,21 +84,21 @@ const About = () => {
     let index = 0;
 
     return (
-        <div className="h-fit relative p-20 pb-0">
-            <div className="text-start w-full border-b border-zinc-800 text-zinc-200 text-6xl mb-8 flex items-start justify-start gap-2">
+        <div className="flex items-center justify-center w-full relative flex-col py-10 lg:py-10 md:py-8 sm:py-6 px-4 lg:px-20 md:px-16 sm:px-12">
+            <div className="text-start w-full border-b-1 border-zinc-800  text-zinc-200 text-3xl lg:text-6xl md:text-5xl sm:text-3xl mb-4 lg:mb-8 md:mb-8 sm:mb-8 flex items-start justify-start gap-2 ">
                 <h1 className="font-semibold mb-2">About Me</h1>
-                <div className="flex items-center justify-center mt-8 text-zinc-400 font-semibold mb-10">
-                    <IoReturnUpForward className="text-6xl rotate-90" />
+                <div className="flex items-center justify-center  mt-4 lg:mt-8 md:mt-6 sm:mt-4 text-zinc-400 font-semibold mb-3 lg:mb-10 md:mb-8 sm:mb-6">
+                    <IoReturnUpForward className=" text-3xl lg:text-6xl md:text-5xl sm:text-3xl rotate-90" />
                 </div>
             </div>
 
-            <div className="px-0 py-10 gap-15 flex flex-row items-start justify-between">
-                <div className="w-4/10 pt-10 flex flex-col items-center justify-center gap-5">
+            <div className="px-0 lg:py-10 md:py-8 sm:py-6 gap-5 lg:gap-15 md:gap-12 sm:gap-10 flex flex-col lg:flex-row md:flex-row sm:flex-col  items-start justify-between">
+                <div className="w-full lg:w-4/10 md:w-4/10 sm:w-full pt-10 flex flex-col items-center justify-center gap-5">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.4 }} 
+                        transition={{ duration: 0.6, delay: 0.4 }}
                         className="relative w-35 h-35 flex items-center justify-center">
                         <div className="absolute inset-[-2] rounded-full border-[0px] w-38 h-38 border-transparent blob-outline" />
                         <img
@@ -157,13 +157,13 @@ const About = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.4 }}
-                        className="mt-10 text-center mb-15 flex flex-row items-center justify-center gap-4"
+                        className="mt-10 text-center mb-0 lg:mb-15 md:mb-12 sm:mb-10 flex flex-row items-center justify-center gap-4"
                     >
-                        <div className="flex flex-wrap gap-4">
+                        <div className="flex flex-wrap gap-2 lg:gap-4 md:gap-3 sm:gap-2">
                             {statsData.map((stat) => (
                                 <div
                                     key={stat.id}
-                                    className="w-fit rounded-2xl backdrop-blur-lg bg-white/7 shadow-2xl bg-background/100 flex items-center justify-center p-4 px-4"
+                                    className="w-fit rounded-2xl backdrop-blur-lg bg-white/7 shadow-2xl bg-background/100 flex items-center justify-center p-3 lg:p-4 md:p-3 sm:p-2 px-4 lg:px-4 md:px-3 sm:px-2"
                                 >
                                     <div className="text-white">
                                         <div className="w-full flex justify-start items-end leading-none">
@@ -172,7 +172,7 @@ const About = () => {
                                                 <ShinyText className="text-2xl"><Counter from={0} to={stat.number} animationOptions={{ duration: 2 }} /></ShinyText>
                                             ) : (
                                                 <h1
-                                                    className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                                                    className="text-lg lg:text-3xl md:text-2xl sm:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
 
                                                 >
                                                     <Counter from={0} to={stat.number} animationOptions={{ duration: 2 }} />
@@ -180,11 +180,14 @@ const About = () => {
                                             )}
 
                                             {stat.hasPlus && (
-                                                <span className="text-2xl text-white translate-y-[-10px] ml-1">+</span>
+                                                <span className="text-[0.7rem] sm:text-lg md:text-xl lg:text-lg text-white translate-y-[-15px] sm:translate-y-[-10px] md:translate-y-[-10px] lg:translate-y-[-15px] ml-1">
+                                                    +
+                                                </span>
                                             )}
+
                                         </div>
 
-                                        <h3 className="text-white text-[0.9rem] w-20 flex items-start justify-start text-start text-zinc-400 pt-1">
+                                        <h3 className="text-white  text-[0.5rem] lg:text-[0.9rem] md:text-[0.8rem] sm:text-[0.7rem] w-20 flex items-start justify-start text-start text-zinc-400 pt-1">
                                             {stat.label}
                                         </h3>
                                     </div>
@@ -194,7 +197,7 @@ const About = () => {
                     </motion.div>
                 </div>
 
-                <div className="w-6/10 pt-10 text-zinc-300 border-l border-zinc-600 h-fit pb-10">
+                <div className="w-full lg:w-6/10 md:w-6/10 sm:full pt-0 lg:pt-10 md:pt-8 sm:pt-6 text-zinc-300 border-l border-zinc-600 h-fit pb-10">
                     <div className="w-full flex flex-col items-center justify-end">
                         <div className="mb-10">
                             <span
@@ -222,15 +225,15 @@ const About = () => {
                                 return (
                                     <div
                                         key={rowIdx}
-                                        className="flex flex-row flex-wrap items-center justify-center gap-3"
+                                        className="flex flex-row flex-wrap items-center justify-center gap-2 lg:gap-3 md:gap-2 sm:gap-1"
                                     >
                                         {rowItems.map(({ name, icon: Icon }, i) => (
                                             <div
                                                 key={i}
-                                                className="inline-flex items-center gap-2 bg-white/10 text-white px-4 py-2 rounded-full shadow-md hover:bg-white/20 transition"
+                                                className="inline-flex items-center gap-2 bg-white/10 text-white px-2 lg:px-4 md:px-3 sm:px-2 py-2 rounded-full shadow-md hover:bg-white/20 transition"
                                             >
-                                                <Icon className="text-lg text-zinc-400" />
-                                                <span className="text-xs">{name}</span>
+                                                <Icon className="text-[0.6rem] lg:text-lg md:text-base sm:text-sm text-zinc-400" />
+                                                <span className="text-[0.6rem] lg:text-xs md:text-[0.7rem] sm:text-[0.6rem]">{name}</span>
                                             </div>
                                         ))}
                                     </div>

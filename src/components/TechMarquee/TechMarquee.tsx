@@ -47,48 +47,67 @@ const loopStack = [...techStack1, ...techStack1];
 const loopStack2 = [...techStack2, ...techStack2];
 const TechMarquee = () => {
   return (
-    <div className="space-y-6 shadow-lg bg-white/7 backdrop-blur-lg py-6 overflow-hidden px-10">
+    <div className="space-y-4 lg:space-y-7 md:space-y-6 sm:space-y-5 shadow-lg bg-white/7 backdrop-blur-lg py-2 lg:py-6 md:py-5 sm:py-4 overflow-hidden px-10">
       {/* First Row */}
       <motion.div
-  className="flex gap-7 whitespace-nowrap"
-  animate={{ x: ['0%', '-135.2%'] }}
-  transition={{
-    ease: 'linear',
-    duration: 25,
-    repeat: Infinity,
-  }}
->
-  {loopStack.map(({ name, icon: Icon }, index) => (
-    <div
-      key={`${name}-${index}`}
-      className="inline-flex items-center gap-2 bg-white/10 text-white px-4 py-2 rounded-lg shadow-md min-w-[10rem] justify-center"
-    >
-      <Icon className="text-xl" />
-      <span className="text-sm">{name}</span>
-    </div>
-  ))}
-</motion.div>
+        className="flex gap-4 lg:gap-7 md:gap-6 sm:gap-5 whitespace-nowrap"
+        animate={{ x: ['0%', '-135.2%'] }}
+        transition={{
+          ease: 'linear',
+          duration: 25,
+          repeat: Infinity,
+        }}
+      >
+        {loopStack.map(({ name, icon: Icon }, index) => (
+          <div
+            key={`${name}-${index}`}
+            className="
+    inline-flex items-center justify-center
+    gap-2 bg-white/10 text-white 
+    px-4 py-2 rounded-lg shadow-md
+    min-w-[5rem] max-w-fit
+    lg:min-w-[10rem] md:min-w-[8rem] sm:min-w-[6rem]
+  "
+          >
+            <Icon className="text-[0.8rem] sm:text-[1rem] md:text-[1.2rem] lg:text-lg" />
+            <span className="text-[0.7rem] sm:text-sm md:text-[0.9rem] lg:text-base">
+              {name}
+            </span>
+          </div>
+
+        ))}
+      </motion.div>
 
       {/* Second Row */}
       <motion.div
-      className="flex gap-7 whitespace-nowrap"
-  animate={{ x: ['-135.2%', '0%'] }}
-  transition={{
-    ease: 'linear',
-    duration: 25,
-    repeat: Infinity,
-  }}
-      
+        className="flex gap-4 lg:gap-7 md:gap-6 sm:gap-5 whitespace-nowrap"
+
+        animate={{ x: ['-135.2%', '0%'] }}
+        transition={{
+          ease: 'linear',
+          duration: 25,
+          repeat: Infinity,
+        }}
+
       >
         {loopStack2.map(({ name, icon: Icon }, index) => (
-    <div
-      key={`${name}-${index}`}
-      className="inline-flex items-center gap-2 bg-white/10 text-white px-4 py-2 rounded-lg shadow-md min-w-[10rem] justify-center"
-    >
-      <Icon className="text-xl" />
-      <span className="text-sm">{name}</span>
-    </div>
-  ))}
+          <div
+            key={`${name}-${index}`}
+            className="
+    inline-flex items-center justify-center
+    gap-2 bg-white/10 text-white 
+    px-4 py-2 rounded-lg shadow-md
+    min-w-[5rem] max-w-fit
+    lg:min-w-[10rem] md:min-w-[8rem] sm:min-w-[6rem]
+  "
+          >
+            <Icon className="text-[0.8rem] sm:text-[1rem] md:text-[1.2rem] lg:text-lg" />
+            <span className="text-[0.7rem] sm:text-sm md:text-[0.9rem] lg:text-base">
+              {name}
+            </span>
+          </div>
+
+        ))}
       </motion.div>
     </div>
   );
