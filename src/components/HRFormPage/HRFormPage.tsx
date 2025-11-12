@@ -57,7 +57,7 @@ const HRFormPage = () => {
         className="bg-white/10 backdrop-blur-lg p-4 lg:p-8 md:p-6 sm:p-4 rounded-2xl w-full max-w-2xl shadow-xl border border-white/20"
       >
         <h2 className="text-lg lg:text-3xl md:text-2xl sm:text-xl font-bold text-white text-center mb-8">
-          HR Offer / Collaboration Form
+          Collaboration Form
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
