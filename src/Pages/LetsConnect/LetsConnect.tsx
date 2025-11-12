@@ -77,7 +77,7 @@ Fill out the form below, and let’s start building something exceptional togeth
 
                 </div>
                 <div className="border-t-1 border-zinc-600 p-4 text-[0.6rem] lg:text-[1rem] lg:p-10 text-zinc-100 text-center">
-                    @Copy Rights Reserved 2023 Pushpak Jangela
+                    @ Pushpak Jangela
 
 
                 </div>
