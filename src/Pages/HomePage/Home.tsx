@@ -1,13 +1,14 @@
 
-import model from "../../assets/image/model.jpg"
-import model2 from "../../assets/image/model2.jpg"
-import model3 from "../../assets/image/model3.jpg"
-import model4 from "../../assets/image/model4.jpg"
 import { FiDownload } from "react-icons/fi";
-import PushpakPhoto from "../../assets/image/PushpakPhoto.jpeg"
 import Amazon from "../../assets/image/Amazon.png"
 import ochiDash from "../../assets/image/ochiDash.png"
 import ochiEnd from "../../assets/image/ochiEnd.png"
+import OY from "../../assets/image/OY.png"
+import rejouise from "../../assets/image/rejouise.png"
+import tooGoodCo from "../../assets/image/tooGoodCo.png"
+import blog from "../../assets/image/blog.png"
+import { b } from "framer-motion/client";
+
 
 const Home = () => {
   return (
@@ -22,13 +23,13 @@ const Home = () => {
                   fontWeight: 550,
                   fontFamily: "cursive", backgroundImage: "radial-gradient(circle,rgba(255, 255, 255, 1) 40%, rgb(131, 131, 131) 100%)", lineHeight: 1.7
                 }}>Pushpak Jangela</span>
-                <span
+                {/* <span
                   className="overflow-hidden rounded-full w-11 h-5 sm:w-12 sm:h-3 md:w-14 md:h-10 lg:w-22 lg:h-9   ml-2 bg-cover bg-no-repeat"
                   style={{
                     backgroundImage: `url(${PushpakPhoto})`,
                     backgroundPosition: 'center 28%',
                   }}
-                ></span>
+                ></span> */}
               </h1>
 
               <h1
@@ -78,22 +79,22 @@ const Home = () => {
                 seamless</h1>
               <h1 style={{ lineHeight: 1.6 }} className="text-[0.75rem] sm:text-sm md:text-xl lg:text-3xl flex items-center justify-center gap-2">
                 frontend experiences
-               
-                   <span
-                  className="overflow-hidden rounded-full w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-12 lg:h-12  bg-cover bg-no-repeat"
+
+                <span
+                  className="overflow-hidden rounded-full w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10  bg-cover bg-no-repeat"
                   style={{
-                    backgroundImage: `url(${model})`,
+                    backgroundImage: `url(${rejouise})`,
                   }}
                 ></span>
-                  {/* <img
+                {/* <img
                     className="w-full h-full object-cover object-center"
                     src={model}
                     alt=""
                   /> */}
-                    <span
-                  className="overflow-hidden rounded-full w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-12 lg:h-12  bg-cover bg-no-repeat ml-[-15px] lg:ml-[-30px]"
+                <span
+                  className="overflow-hidden rounded-full w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10  bg-cover bg-no-repeat ml-[-15px] lg:ml-[-27px]"
                   style={{
-                    backgroundImage: `url(${model2})`,
+                    backgroundImage: `url(${OY})`,
                   }}
                 ></span>
 
@@ -109,9 +110,9 @@ const Home = () => {
                 </span> */}
 
                 <span
-                  className="overflow-hidden rounded-full w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-12 lg:h-12  bg-cover bg-no-repeat ml-[-15px] lg:ml-[-30px]"
+                  className="overflow-hidden rounded-full w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10  bg-cover bg-no-repeat ml-[-15px] lg:ml-[-27px]"
                   style={{
-                    backgroundImage: `url(${model3})`,
+                    backgroundImage: `url(${blog})`,
                   }}
                 ></span>
                 {/* <span
@@ -125,9 +126,9 @@ const Home = () => {
                 </span> */}
 
                 <span
-                  className="overflow-hidden rounded-full w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-12 lg:h-12  bg-cover bg-no-repeat ml-[-15px] lg:ml-[-30px]"
+                  className="overflow-hidden rounded-full w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10  bg-cover bg-no-repeat ml-[-15px] lg:ml-[-27px]"
                   style={{
-                    backgroundImage: `url(${model4})`,
+                    backgroundImage: `url(${tooGoodCo})`,
                   }}
                 ></span>
                 {/* <span
@@ -143,14 +144,14 @@ const Home = () => {
               </h1>
 
               <h1 style={{ lineHeight: 1.6 }} className="text-[0.75rem] sm:text-sm md:text-xl lg:text-3xl flex items-center align-center justify-center">robust backend solutions
-                <span
+                {/* <span
                   className="overflow-hidden rounded-full w-8 h-4 lg:w-22 lg:h-9 md:w-14 md:h-8 ml-2 bg-cover bg-no-repeat"
                   style={{
                     backgroundImage: `url(${model})`,
                     backgroundPosition: 'center',
                   }}
-                ></span>
-               
+                ></span> */}
+
               </h1>
 
             </div>
@@ -161,9 +162,13 @@ const Home = () => {
           <h1 className="text-white text-[0.5rem] sm:text-sm md:text-lg lg:text-xl tracking-normal text-center opacity-60 pt-0 lg:pt-4 md:pt-3 sm:pt-2">I bring ideas to life on the web — crafting intuitive frontend designs  and  efficient backend <br /> logic that together make high-performing, responsive websites.</h1>
         </div>
         <div className="w-full flex items-center justify-center mt-4 lg:mt-10 md:mt-8 sm:mt-6">
-
-          <div className="flex items-center justify-center gap-2 py-1 px-2 lg:px-3 md:px-2 sm:px-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 w-fit">
-            <div className=" flex items-center justify-center">
+          <a
+            href="https://drive.google.com/file/d/1mAWw3h95uPuUNat56TKj2Lvz14O2-VLh/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 py-1 px-2 lg:px-3 md:px-2 sm:px-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 w-fit hover:scale-105 transition-all duration-300"
+          >
+            <div className="flex items-center justify-center">
               <FiDownload className="text-[0.9rem] lg:text-xl md:text-lg sm:text-sm text-zinc-300 font-semibold" />
             </div>
             <div>
@@ -171,14 +176,8 @@ const Home = () => {
                 Download Resume
               </h1>
             </div>
-          </div>
+          </a>
         </div>
-
-
-
-
-
-
         <div>
 
         </div>

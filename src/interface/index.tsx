@@ -21,6 +21,7 @@ export interface ModalProps {
     src: string;
     title: string;
     color: string;
+    url: string;
   }[]
   parentRef: any;
 }

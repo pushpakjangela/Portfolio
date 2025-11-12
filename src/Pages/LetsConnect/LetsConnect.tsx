@@ -46,7 +46,7 @@ Fill out the form below, and let’s start building something exceptional togeth
                                 <h1 className="text-3xl text-zinc-100">Pushpak</h1>
                             </div>
                             <div>
-                                <h1 className="text-sm text-zinc-400">I am Pushpak jangela senior frontend developer working on KFintech company.Working with  React and may frontend frameworks</h1>
+                                <h1 className="text-sm text-zinc-400">Frontend Engineer with 2+ years of experience in ReactJS and TypeScript, building responsive, high-performance web apps and seamless user interfaces.</h1>
                             </div>
                         </div>
                     </div>

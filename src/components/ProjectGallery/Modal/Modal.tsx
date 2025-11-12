@@ -7,43 +7,24 @@ import { ScaleAnimation } from "../../../Function/AnimatedFunction/AnimatedFunct
 const Modal: React.FC<ModalProps> = ({ modal, projectGallery, parentRef }) => {
   const { active, index } = modal;
 
-  const container = useRef(null);
-  const cursor = useRef(null);
-  const cursorLabel = useRef(null);
+  const container = useRef<HTMLDivElement | null>(null);
+  const cursor = useRef<HTMLDivElement | null>(null);
+  const cursorLabel = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (!parentRef.current) return;
 
-    const mouseContainerX = gsap.quickTo(container.current, "left", {
-      duration: 0.8,
-      ease: "power3",
-    });
-    const mouseContainerY = gsap.quickTo(container.current, "top", {
-      duration: 0.8,
-      ease: "power3",
-    });
+    const mouseContainerX = gsap.quickTo(container.current, "left", { duration: 0.8, ease: "power3" });
+    const mouseContainerY = gsap.quickTo(container.current, "top", { duration: 0.8, ease: "power3" });
 
-    const mouseCursorX = gsap.quickTo(cursor.current, "left", {
-      duration: 0.5,
-      ease: "power3",
-    });
-    const mouseCursorY = gsap.quickTo(cursor.current, "top", {
-      duration: 0.5,
-      ease: "power3",
-    });
+    const mouseCursorX = gsap.quickTo(cursor.current, "left", { duration: 0.5, ease: "power3" });
+    const mouseCursorY = gsap.quickTo(cursor.current, "top", { duration: 0.5, ease: "power3" });
 
-    const mouseCursorLabelX = gsap.quickTo(cursorLabel.current, "left", {
-      duration: 0.45,
-      ease: "power3",
-    });
-    const mouseCursorLabelY = gsap.quickTo(cursorLabel.current, "top", {
-      duration: 0.45,
-      ease: "power3",
-    });
+    const mouseCursorLabelX = gsap.quickTo(cursorLabel.current, "left", { duration: 0.45, ease: "power3" });
+    const mouseCursorLabelY = gsap.quickTo(cursorLabel.current, "top", { duration: 0.45, ease: "power3" });
 
     const handleMouseMove = (e: MouseEvent) => {
       if (!parentRef.current) return;
-
       const bounds = parentRef.current.getBoundingClientRect();
       const relativeX = e.clientX - bounds.left;
       const relativeY = e.clientY - bounds.top;
@@ -58,11 +39,15 @@ const Modal: React.FC<ModalProps> = ({ modal, projectGallery, parentRef }) => {
 
     const parentElement = parentRef.current;
     parentElement.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      parentElement.removeEventListener("mousemove", handleMouseMove);
-    };
+    return () => parentElement.removeEventListener("mousemove", handleMouseMove);
   }, [parentRef]);
+
+  const handleViewClick = () => {
+    const currentProject = projectGallery[index];
+    if (currentProject?.url) {
+      window.open(currentProject.url, "_blank");
+    }
+  };
 
   return (
     <>
@@ -74,21 +59,18 @@ const Modal: React.FC<ModalProps> = ({ modal, projectGallery, parentRef }) => {
         className="h-[350px] w-[400px] absolute bg-white overflow-hidden pointer-events-none flex items-center justify-center"
       >
         <div
-          className="h-full w-full absolute transition-[top] duration-[500ms] ease-[cubic-bezier(0.76,0,0.24,1)] "
+          className="h-full w-full absolute transition-[top] duration-[500ms] ease-[cubic-bezier(0.76,0,0.24,1)]"
           style={{ top: index * -100 + "%" }}
         >
-          {projectGallery.map((project, index) => {
-            const { src, color, title } = project;
-            return (
-              <div
-                key={`modal_${index}`}
-                className="h-full w-full flex items-center justify-center p-2"
-                style={{ backgroundColor: color }}
-              >
-                <img src={src} alt={title} style={{ width: 300 }} />
-              </div>
-            );
-          })}
+          {projectGallery.map((project, i) => (
+            <div
+              key={`modal_${i}`}
+              className="h-full w-full flex items-center justify-center p-2"
+              style={{ backgroundColor: project.color }}
+            >
+              <img src={project.src} alt={project.title} style={{ width: 350, height: 200 }} />
+            </div>
+          ))}
         </div>
       </motion.div>
 
@@ -97,7 +79,7 @@ const Modal: React.FC<ModalProps> = ({ modal, projectGallery, parentRef }) => {
         initial="initial"
         animate={active ? "open" : "closed"}
         ref={cursor}
-        className="w-20 h-20 rounded-full bg-[#455CE9] text-white absolute z-2 flex items-center justify-center text-sm font-light pointer-events-none"
+        className="w-20 h-20 rounded-full bg-[#455CE9] text-white absolute z-20 flex items-center justify-center text-sm font-light pointer-events-none"
       />
 
       <motion.div
@@ -105,10 +87,12 @@ const Modal: React.FC<ModalProps> = ({ modal, projectGallery, parentRef }) => {
         initial="initial"
         animate={active ? "open" : "closed"}
         ref={cursorLabel}
-        className="w-20 h-20 rounded-full absolute z-2 flex items-center justify-center text-sm font-light pointer-events-none"
+        onClick={handleViewClick}
+        className="w-20 h-20 rounded-full absolute z-30 flex items-center justify-center text-sm font-light cursor-pointer"
       >
         View
       </motion.div>
+      
     </>
   );
 };
