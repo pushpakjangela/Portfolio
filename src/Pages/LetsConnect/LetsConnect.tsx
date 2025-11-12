@@ -35,48 +35,48 @@ Fill out the form below, and let’s start building something exceptional togeth
                     </div> */}
                 </div>
 
-                <div className=" py-10 flex ">
-                    <div className="w-4/10" >
-                        <div className="w-2/3 flex flex-col gap-1">
+                <div className=" py-10 flex flex-col lg:flex-row md:flex-col sm:flex-row gap-2 lg:gap-0">
+                    <div className="w-full lg:w-4/10" >
+                        <div className="w-full lg:w-2/3 flex flex-col gap-1">
 
                             <div className="flex items-center gap-1">
                                 <div>
-                                    <IoLogoPinterest className="text-4xl text-zinc-100" />
+                                    <IoLogoPinterest className="text-xl lg:text-4xl text-zinc-100" />
                                 </div>
-                                <h1 className="text-3xl text-zinc-100">Pushpak</h1>
+                                <h1 className="text-xl lg:text-3xl text-zinc-100">Pushpak</h1>
                             </div>
                             <div>
-                                <h1 className="text-sm text-zinc-400">Frontend Engineer with 2+ years of experience in ReactJS and TypeScript, building responsive, high-performance web apps and seamless user interfaces.</h1>
+                                <h1 className="text-[0.6rem] lg:text-sm text-zinc-400">Frontend Engineer with 2+ years of experience in ReactJS and TypeScript, building responsive, high-performance web apps and seamless user interfaces.</h1>
                             </div>
                         </div>
                     </div>
-                    <div className="pt-1 flex w-6/10">
+                    <div className="pt-1 flex w-full lg:w-6/10">
 
-                        <div className="w-3/9">
+                        <div className="w-3/6 lg:w-3/9">
                             <div className="flex flex-col gap-2 text-zinc-400">
-                                <h1 className="text-zinc-100 text-lg">Address</h1>
-                                <h1 className="text-[0.7rem]">H.NO 629 GadiyaPura 462022</h1>
+                                <h1 className="text-zinc-100 text-[0.7rem] lg:text-lg">Address</h1>
+                                <h1 className=" text-[0.6rem] lg:text-[0.7rem]">H.NO 629 GadiyaPura 462022</h1>
                                 <h1 className="text-[0.7rem]">Anand Nagar Bhopal Madhya Pradessh</h1>
                             </div>
                         </div>
-                        <div className="w-3/9 ">
+                        <div className="w-3/6 lg:w-3/9 ">
                             <div className="flex flex-col gap-2 text-zinc-400">
-                                <h1 className="text-zinc-100 text-lg">Email</h1>
-                                <h1 className="text-[0.7rem]">rv9109559291@gmail.com</h1>
-                                <h1 className="text-[0.7rem]">jangelapushpak2020@gmail.com</h1>
+                                <h1 className="text-zinc-100 text-[0.7rem] lg:text-lg">Email</h1>
+                                <h1 className="text-[0.6rem] lg:text-[0.7rem]">rv9109559291@gmail.com</h1>
+                                <h1 className="text-[0.6rem] lg:text-[0.7rem]">jangelapushpak2020@gmail.com</h1>
                             </div>
                         </div>
                         <div className="w-3/9 text-zinc-400">
                             <div className="flex flex-col gap-2 text-zinc-400">
-                                <h1 className="text-zinc-100 text-lg">Phone</h1>
-                                <h1 className="text-[0.7rem]">+91 8085390816</h1>
-                                <h1 className="text-[0.7rem]">+91 9907433621</h1>
+                                <h1 className="text-zinc-100 text-[0.7rem] lg:text-lg">Phone</h1>
+                                <h1 className="text-[0.6rem] lg:text-[0.7rem]">+91 8085390816</h1>
+                                <h1 className="text-[0.6rem]">+91 9907433621</h1>
                             </div>
                         </div>
                     </div>
 
                 </div>
-                <div className="border-t-1 border-zinc-600 p-10 text-zinc-100 text-center">
+                <div className="border-t-1 border-zinc-600 p-4 text-[0.6rem] lg:text-[1rem] lg:p-10 text-zinc-100 text-center">
                     @Copy Rights Reserved 2023 Pushpak Jangela
 
 
