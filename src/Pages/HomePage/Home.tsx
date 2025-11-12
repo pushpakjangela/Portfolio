@@ -7,7 +7,6 @@ import OY from "../../assets/image/OY.png"
 import rejouise from "../../assets/image/rejouise.png"
 import tooGoodCo from "../../assets/image/tooGoodCo.png"
 import blog from "../../assets/image/blog.png"
-import { b } from "framer-motion/client";
 
 
 const Home = () => {
