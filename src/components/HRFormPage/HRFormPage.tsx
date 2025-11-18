@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import emailjs from "emailjs-com";
+// import emailjs from "emailjs-com";
 
 const HRFormPage = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -19,34 +19,34 @@ const HRFormPage = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = (_e: React.FormEvent) => {
+    // e.preventDefault();
 
-    if (!formRef.current) return;
+    // if (!formRef.current) return;
 
-    const SERVICE_ID = "service_bno02sk";
-    const TEMPLATE_ID = "template_98zsaos";
-    const PUBLIC_KEY = "dmrkJpW6805h4UW0E";
+    // const SERVICE_ID = "service_bno02sk";
+    // const TEMPLATE_ID = "template_98zsaos";
+    // const PUBLIC_KEY = "dmrkJpW6805h4UW0E";
 
-    emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
-      .then(
-        () => {
+    // emailjs
+    //   .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
+    //   .then(
+    //     () => {
           alert("✅ Offer details sent successfully!");
-          setFormData({
-            companyName: "",
-            email: "",
-            phone: "",
-            position: "",
-            message: "",
-            year: "2025",
-          });
-        },
-        (error:any) => {
-          console.error("EmailJS Error:", error);
-          alert("❌ Failed to send the form. Try again later!");
-        }
-      );
+    //       setFormData({
+    //         companyName: "",
+    //         email: "",
+    //         phone: "",
+    //         position: "",
+    //         message: "",
+    //         year: "2025",
+    //       });
+    //     },
+    //     (error:any) => {
+    //       console.error("EmailJS Error:", error);
+    //       alert("❌ Failed to send the form. Try again later!");
+    //     }
+    //   );
   };
 
   return (
